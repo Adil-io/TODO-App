@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+#searchArea {
+	position: absolute;
+	border-radius: 10px;
+	background-color: aqua;
+	width: 40%;
+	margin: 20px;
+
+}
+
+#addBtn {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: plum;
+	display: pointer;
+}
+
+#displayArea{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	background-color:black;
+	height: 100vh;
+	width: 50%;
+}
+
+#ul1{
+	margin: 20px;
+}
+
+.liTask{
+	width: 100%;
+	display: inline-block;
+	background-color: gainsboro;
+
+
+}
+.delBtn{
+	display: inline-block;
+
+}
