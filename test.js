@@ -3,15 +3,28 @@ var addBtn = document.getElementById('addBtn')
 var display = document.getElementById('displayArea')
 
 addBtn.addEventListener('click', addList)
-
+var i = 0
 function addList() {
-    var ul = document.getElementById('ul1')
-    var li = document.createElement('li')
-    var delBtn = document.createElement('div')
-    li.textContent = s.value
-    delBtn.textContent = 'Delete'
-    delBtn.setAttribute('class', 'delBtn')
-    li.setAttribute('class', 'liTask')
-    ul.appendChild(li)
-    ul.appendChild(delBtn)
+    if (s.value !== '') {
+        var list = document.createElement('div')
+        var delBtn = document.createElement('button')
+        // var trash = document.createElement('i')
+        list.textContent = s.value
+        s.value = ''
+        delBtn.textContent = 'Delete'
+        delBtn.addEventListener('click', gList)
+        delBtn.setAttribute('class', 'delBtn')
+        // trash.setAttribute('class', 'fas fa-trash')
+        list.setAttribute('class', 'liTask')
+        list.appendChild(delBtn)
+        // list.appendChild(trash)
+        display.appendChild(list)
+    }
+
+}
+
+function gList() {
+    document.getElementsByClassName('liTask')[i].style.cssText = 'color:grey; text-decoration:line-through';
+    document.getElementsByClassName('delBtn')[i].style.cssText = 'display:none'
+    i++
 }
